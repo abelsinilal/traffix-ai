@@ -1,0 +1,6 @@
+{
+  "name": "TRAFFIX AI",
+  "description": "AI-Powered Traffic Incident Prediction & Dynamic Emergency Vehicle Routing System - SIH 2026 Prototype",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

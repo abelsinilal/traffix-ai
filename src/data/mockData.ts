@@ -9,16 +9,16 @@ import {
 } from '../types';
 
 // Map center around a smart urban corridor (e.g., Smart City Command Center zone)
-export const MAP_CENTER = { lat: 17.385044, lng: 78.486671, zoom: 13 }; // Hyderabad/Smart City center coordinates
+export const MAP_CENTER = { lat: 16.2008, lng: 77.3553, zoom: 13 }; // Hyderabad/Smart City center coordinates
 
 export const MOCK_LOCATIONS: Location[] = [
-  { id: 'loc-1', name: 'District Hospital (Hub A)', lat: 17.395, lng: 78.472, address: 'Sector 4, Healthcare Complex', zone: 'Zone 1' },
-  { id: 'loc-2', name: 'Government Medical College', lat: 17.368, lng: 78.508, address: 'University Road, East Wing', zone: 'Zone 3' },
-  { id: 'loc-3', name: 'Central Fire Station', lat: 17.402, lng: 78.480, address: 'Station Road, Station Square', zone: 'Zone 2' },
-  { id: 'loc-4', name: 'City Police Headquarters', lat: 17.378, lng: 78.492, address: 'Civic Lines, Sector 2', zone: 'Zone 2' },
-  { id: 'loc-5', name: 'NH-167 Express Junction', lat: 17.388, lng: 78.515, address: 'National Highway 167 Mile 14', zone: 'Zone 4' },
-  { id: 'loc-6', name: 'Main Market Square', lat: 17.375, lng: 78.478, address: 'Market Road Cross', zone: 'Zone 3' },
-  { id: 'loc-7', name: 'Ring Road Interchange', lat: 17.412, lng: 78.502, address: 'Outer Ring Road Exit 9', zone: 'Zone 1' },
+  { id: 'loc-1', name: 'RIMS District Hospital', lat: 16.2050, lng: 77.3580, address: 'Station Road, Raichur' },
+  { id: 'loc-2', name: 'Navodaya Medical College', lat: 16.1850, lng: 77.3710, address: 'Mantralayam Road, Raichur' },
+  { id: 'loc-3', name: 'Central Fire Station', lat: 16.2020, lng: 77.3510, address: 'Ambedkar Circle, Raichur' },
+  { id: 'loc-4', name: 'City Police Headquarters', lat: 16.1980, lng: 77.3540, address: 'SP Office Road, Raichur' },
+  { id: 'loc-5', name: 'NH-167 Express Junction', lat: 16.2120, lng: 77.3650, address: 'National Highway 167' },
+  { id: 'loc-6', name: 'Main Market Square', lat: 16.2000, lng: 77.3560, address: 'Gunj Road Cross' },
+  { id: 'loc-7', name: 'Bypass Ring Road', lat: 16.2180, lng: 77.3480, address: 'Outer Ring Road Exit' },
 ];
 
 export const MOCK_INCIDENTS: Incident[] = [

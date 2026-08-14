@@ -32,8 +32,8 @@ export const EmergencyRoutingView: React.FC<EmergencyRoutingViewProps> = ({
   setIsIncidentSimulated
 }) => {
   const [vehicleType, setVehicleType] = useState<VehicleType>('Ambulance');
-  const [startLocation, setStartLocation] = useState('District Hospital');
-  const [destination, setDestination] = useState('Government Medical College');
+  const [startLocation, setStartLocation] = useState('RIMS District Hospital');
+  const [destination, setDestination] = useState('Gunj Road Market');
   const [priority, setPriority] = useState<PriorityLevel>('Critical');
   const [selectedRouteId, setSelectedRouteId] = useState<string>('route-a');
 
@@ -162,7 +162,7 @@ export const EmergencyRoutingView: React.FC<EmergencyRoutingViewProps> = ({
                 onChange={(e) => setStartLocation(e.target.value)}
                 className="w-full bg-[#0f172a] border border-slate-800 rounded-lg p-2.5 text-slate-200 focus:border-blue-500 focus:outline-none"
               >
-                <option value="District Hospital">District Hospital (Hub A)</option>
+                <option value="RIMS District Hospital">RIMS District Hospital (Hub A)</option>
                 <option value="Central Fire Station">Central Fire Station</option>
                 <option value="City Police Headquarters">City Police HQ</option>
                 <option value="Station Road Flyover">Station Road Depot</option>
@@ -177,10 +177,10 @@ export const EmergencyRoutingView: React.FC<EmergencyRoutingViewProps> = ({
                 onChange={(e) => setDestination(e.target.value)}
                 className="w-full bg-[#0f172a] border border-slate-800 rounded-lg p-2.5 text-slate-200 focus:border-blue-500 focus:outline-none"
               >
-                <option value="Government Medical College">Government Medical College</option>
-                <option value="NH-167 Incident Zone">NH-167 Incident Zone</option>
-                <option value="Main Market Square">Main Market Square</option>
-                <option value="Outer Ring Road Interchange">Outer Ring Road Interchange</option>
+                <option value="Gunj Road Market">Gunj Road Market Area</option>
+                <option value="Navodaya Medical College">Navodaya Medical College</option>
+                <option value="Ambedkar Circle">Ambedkar Circle Junction</option>
+                <option value="Mantralayam road">Mantralayam road</option>
               </select>
             </div>
 

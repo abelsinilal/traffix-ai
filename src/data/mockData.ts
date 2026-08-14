@@ -9,7 +9,7 @@ import {
 } from '../types';
 
 // Map center around a smart urban corridor (e.g., Smart City Command Center zone)
-export const MAP_CENTER = { lat: 16.2008, lng: 77.3553, zoom: 13 }; // Hyderabad/Smart City center coordinates
+export const MAP_CENTER = { lat: 16.2008, lng: 77.3553, zoom: 13 }; // Raichur Smart City center coordinates
 
 export const MOCK_LOCATIONS: Location[] = [
   { id: 'loc-1', name: 'RIMS District Hospital', lat: 16.2050, lng: 77.3580, address: 'Station Road, Raichur' },
@@ -24,45 +24,45 @@ export const MOCK_LOCATIONS: Location[] = [
 export const MOCK_INCIDENTS: Incident[] = [
   {
     id: 'INC-001',
-    locationName: 'NH-167 Express Junction',
-    lat: 17.388,
-    lng: 78.515,
+    locationName: 'Ambedkar Circle Junction',
+    lat: 16.2020,
+    lng: 77.3510,
     type: 'Accident',
     severity: 'Critical',
     timestamp: '10:32 AM Today',
     status: 'Active',
     riskScore: 88,
-    affectedRoads: ['NH-167 Northbound', 'Ring Road Connector'],
+    affectedRoads: ['Station Road', 'Ambedkar Circle Flyover'],
     nearbyVehicles: ['A102 (Ambulance)', 'P301 (Police)'],
-    description: 'Multi-vehicle collision involving a commercial truck and two cars causing lane blockage.',
-    recommendedAction: 'Dispatch heavy rescue vehicle, activate digital VMS signage, reroute emergency units via Ring Road Exit 9.'
+    description: 'Multi-vehicle collision causing lane blockage near Ambedkar Circle.',
+    recommendedAction: 'Dispatch heavy rescue vehicle, reroute emergency units via Ring Road Bypass.'
   },
   {
     id: 'INC-002',
-    locationName: 'Main Market Square',
-    lat: 17.375,
-    lng: 78.478,
+    locationName: 'Gunj Road Market',
+    lat: 16.2000,
+    lng: 77.3560,
     type: 'Road Blockage',
     severity: 'High',
     timestamp: '10:18 AM Today',
     status: 'Active',
     riskScore: 78,
-    affectedRoads: ['Market Road', 'Station Road Link'],
+    affectedRoads: ['Gunj Road', 'Station Road Link'],
     nearbyVehicles: ['P302 (Police)'],
     description: 'Fallen tree and utility wire damage blocking two south-bound lanes.',
     recommendedAction: 'Deploy municipal clearing crew; assign traffic constable for manual diversion.'
   },
   {
     id: 'INC-003',
-    locationName: 'Ring Road Interchange',
-    lat: 17.412,
-    lng: 78.502,
+    locationName: 'Bypass Ring Road Interchange',
+    lat: 16.2180,
+    lng: 77.3480,
     type: 'Heavy Congestion',
     severity: 'Moderate',
     timestamp: '09:54 AM Today',
     status: 'Monitoring',
     riskScore: 54,
-    affectedRoads: ['Outer Ring Road Exit 9'],
+    affectedRoads: ['Raichur Bypass Exit 9'],
     nearbyVehicles: ['A104 (Ambulance)'],
     description: 'Peak hour bottleneck build-up extending 1.8 km back from flyover ramp.',
     recommendedAction: 'Adjust signal timing on adjacent arterial feeders to flush corridor.'
@@ -70,29 +70,29 @@ export const MOCK_INCIDENTS: Incident[] = [
   {
     id: 'INC-004',
     locationName: 'Station Road Flyover',
-    lat: 17.398,
-    lng: 78.482,
+    lat: 16.2050,
+    lng: 77.3580,
     type: 'Weather Hazard',
     severity: 'High',
     timestamp: '09:20 AM Today',
     status: 'Active',
     riskScore: 72,
-    affectedRoads: ['Station Road', 'Central Avenue'],
+    affectedRoads: ['Station Road', 'MG Road Cross'],
     nearbyVehicles: ['F204 (Fire Truck)'],
     description: 'Waterlogging under low-clearance railway bridge due to localized flash downpour.',
     recommendedAction: 'Issue hydroplaning alert via mobile notifications and dynamic message signs.'
   },
   {
     id: 'INC-005',
-    locationName: 'University Circle',
-    lat: 17.362,
-    lng: 78.498,
+    locationName: 'Navodaya Medical College Road',
+    lat: 16.1850,
+    lng: 77.3710,
     type: 'Heavy Congestion',
     severity: 'Low',
     timestamp: '08:45 AM Today',
     status: 'Resolved',
     riskScore: 28,
-    affectedRoads: ['University Road'],
+    affectedRoads: ['Mantralayam Road'],
     nearbyVehicles: [],
     description: 'Temporary slow movement cleared following minor fender bender resolution.',
     recommendedAction: 'Corridor cleared. Retain green wave timing for 15 minutes.'
@@ -126,7 +126,7 @@ export const MOCK_TRAFFIC_SEGMENTS: TrafficSegment[] = [
   },
   {
     id: 'seg-3',
-    roadName: 'Market Road',
+    roadName: 'Mantralayam Road',
     zone: 'Zone 3',
     density: 'Severe',
     avgSpeedKmh: 11,
@@ -138,7 +138,7 @@ export const MOCK_TRAFFIC_SEGMENTS: TrafficSegment[] = [
   },
   {
     id: 'seg-4',
-    roadName: 'Ring Road Expressway',
+    roadName: 'Gunj Road Market Area',
     zone: 'Zone 1',
     density: 'Low',
     avgSpeedKmh: 68,
@@ -162,7 +162,7 @@ export const MOCK_TRAFFIC_SEGMENTS: TrafficSegment[] = [
   },
   {
     id: 'seg-6',
-    roadName: 'Civic Lines Boulevard',
+    roadName: 'SP Office Road',
     zone: 'Zone 2',
     density: 'Heavy',
     avgSpeedKmh: 24,
@@ -180,17 +180,17 @@ export const MOCK_EMERGENCY_VEHICLES: EmergencyVehicle[] = [
     callSign: 'A102',
     type: 'Ambulance',
     status: 'En Route',
-    currentLocationName: 'District Hospital',
-    lat: 17.395,
-    lng: 78.472,
-    destinationName: 'Government Medical College',
-    destLat: 17.368,
-    destLng: 78.508,
+    currentLocationName: 'RIMS District Hospital',
+    lat: 16.2050,
+    lng: 77.3580,
+    destinationName: 'Navodaya Medical College',
+    destLat: 16.1850,
+    destLng: 77.3580,
     etaMinutes: 8,
     currentRouteId: 'route-a',
     driverName: 'Rajesh Kumar',
     contactNumber: '+91 98765 43210',
-    unitCode: 'EMS-HYD-04'
+    unitCode: 'EMS-RC-04'
   },
   {
     id: 'veh-2',
@@ -198,13 +198,13 @@ export const MOCK_EMERGENCY_VEHICLES: EmergencyVehicle[] = [
     type: 'Fire Truck',
     status: 'Available',
     currentLocationName: 'Central Fire Station',
-    lat: 17.402,
-    lng: 78.480,
+    lat: 16.2020,
+    lng: 77.3510,
     destinationName: '—',
     etaMinutes: 0,
     driverName: 'Suresh Verma',
     contactNumber: '+91 98765 11223',
-    unitCode: 'FIRE-SEC-02'
+    unitCode: 'FIRE-RC-02'
   },
   {
     id: 'veh-3',
@@ -212,11 +212,11 @@ export const MOCK_EMERGENCY_VEHICLES: EmergencyVehicle[] = [
     type: 'Police Vehicle',
     status: 'En Route',
     currentLocationName: 'City Police HQ',
-    lat: 17.378,
-    lng: 78.492,
-    destinationName: 'NH-167 Incident Zone',
-    destLat: 17.388,
-    destLng: 78.515,
+    lat: 16.1980,
+    lng: 77.3540,
+    destinationName: 'Ambedkar Circle Junction',
+    destLat: 16.2020,
+    destLng: 77.3510,
     etaMinutes: 5,
     currentRouteId: 'route-police-1',
     driverName: 'Insp. Vikram Singh',
@@ -229,30 +229,30 @@ export const MOCK_EMERGENCY_VEHICLES: EmergencyVehicle[] = [
     type: 'Ambulance',
     status: 'On Scene',
     currentLocationName: 'Station Road Flyover',
-    lat: 17.398,
-    lng: 78.482,
-    destinationName: 'District Hospital',
+    lat: 16.2050,
+    lng: 77.3580,
+    destinationName: 'RIMS District Hospital',
     destLat: 17.395,
     destLng: 78.472,
     etaMinutes: 4,
     driverName: 'Anil Sharma',
     contactNumber: '+91 98765 33445',
-    unitCode: 'EMS-HYD-08'
+    unitCode: 'EMS-RC-08'
   },
   {
     id: 'veh-5',
     callSign: 'P302',
     type: 'Police Vehicle',
     status: 'En Route',
-    currentLocationName: 'Civic Lines',
-    lat: 17.375,
-    lng: 78.478,
-    destinationName: 'Main Market Square',
-    destLat: 17.375,
-    destLng: 78.478,
+    currentLocationName: 'SP Office Road',
+    lat: 16.1980,
+    lng: 77.3540,
+    destinationName: 'Gunj Road Market',
+    destLat: 16.2000,
+    destLng: 77.3560,
     etaMinutes: 3,
-    driverName: 'Sub-Insp. Priya Das',
-    contactNumber: '+91 98765 55667',
+    driverName: 'Sub-Insp. Simran',
+    contactNumber: '+91 83104 46771',
     unitCode: 'TRAFFIC-CELL-03'
   }
 ];
@@ -273,7 +273,7 @@ export const MOCK_SYSTEM_ALERTS: SystemAlert[] = [
     message: 'Primary route blocked near Market Square. Rerouting via Ring Road Bypass saves 2m 45s.',
     severity: 'High',
     timeAgo: '5m ago',
-    location: 'District Hospital to Med College',
+    location: 'RIMS District Hospital to Navodaya Medical College',
     read: false
   },
   {
@@ -291,7 +291,7 @@ export const MOCK_SYSTEM_ALERTS: SystemAlert[] = [
     message: 'Road blockage reported near Main Market. Traffic constables notified.',
     severity: 'Moderate',
     timeAgo: '22m ago',
-    location: 'Main Market Square',
+    location: 'Gunj Road Market',
     read: true
   }
 ];
@@ -306,7 +306,7 @@ export const CURRENT_WEATHER: WeatherCondition = {
 };
 
 export const DEFAULT_PREDICTION_INPUT: PredictionInput = {
-  locationName: 'NH-167 Express Junction',
+  locationName: 'Ambedkar Circle Junction',
   trafficDensity: 'Heavy',
   avgSpeed: 22,
   weatherCondition: 'Rainy',

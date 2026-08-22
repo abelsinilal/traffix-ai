@@ -150,7 +150,7 @@ export default function App() {
         {/* Global Demo Mode Notice Banner */}
         <DemoNotice />
 
-        {/* SIH Evaluator Guided Demo Banner */}
+        {/* NIT Raichur Guided Demo Banner */}
         <div className="bg-slate-900/60 border-b border-slate-800 px-4 py-2 flex items-center justify-between gap-3 text-xs">
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-blue-400 shrink-0" />

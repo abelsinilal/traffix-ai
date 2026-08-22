@@ -153,7 +153,7 @@ export const Header: React.FC<HeaderProps> = ({
             <User className="w-4 h-4 text-slate-300" />
           </div>
           <div className="hidden xl:flex flex-col text-left">
-            <span className="text-xs font-bold text-slate-200 font-sans">SIH Evaluator</span>
+            <span className="text-xs font-bold text-slate-200 font-sans">NIT Raichur</span>
             <span className="text-[9px] text-slate-400 font-mono">Control Officer</span>
           </div>
         </div>
